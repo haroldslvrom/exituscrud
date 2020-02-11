@@ -1,0 +1,10 @@
+Ejecutar el proyecto.
+1.- Entrar a xammp y ejecutar apache y mysql.
+2.- Descomprimir el proyecto dentro de la siguiente dirección "c:/xampp/htdocs/".
+1.- Abrir phpMyAdmin en el navegador con la siguiente url http://localhost/phpmyadmin/.
+2.- Da click en la opción de importar.
+3.- Selecciona el archivo exituscrud.sql que se encuentra dentro de la carpeta db del proyecto de ExitusCRUD
+4.- Da click en continuar.(Se genera la base de datos).
+5.- Configurar el "archivo db/conexion.php" con tus credenciales para acceder a la base de datos.
+5.- Entrar al navegador ejecutar la siguiente url http://localhost/exituscrud/index.php.
+6.- Navegar en el sistema.  

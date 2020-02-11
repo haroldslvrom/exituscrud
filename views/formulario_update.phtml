@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exitus CRUD</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <style type="text/css">
+            .mayusculas { text-transform: uppercase; }
+        </style>
+    </head>
+    <body>
+      <div style="background: #FA5858;"class="text-white "><h1>Exitus</h1></div>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="sub-header">Editar usuario</h2>
+        </div>
+          <form class="form1" action="index.php/?opcion=modificar" method="post">
+            <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/>
+              <div class="form-group">
+                <label for="label_nombre">Nombre:</label>
+                <input type="text" name="nombre" class="form-control mayusculas" placeholder="Juan" value="<?php echo $datos['nombre'];?>"/>
+              </div>
+              <div class="form-group">
+                <label for="label_apellido_paterno">Apellido paterno:</label>
+                <input type="text" name="apellido_paterno" class="form-control mayusculas" placeholder="Perez" value="<?php echo $datos['apellido_paterno'];?>"/>
+              </div>
+              <div class="form-group">
+                <label for="label_apellido_materno">Apellido materno:</label>
+                <input type="text" name="apellido_materno" class="form-control mayusculas" placeholder="Rodriguez" value="<?php echo $datos['apellido_materno'];?>"/>
+              </div>
+              <div class="form-group">
+                <label for="label_fecha_nacimiento">Fecha nacimiento:</label>
+                <input type="date" name="fecha_nacimiento" class="form-control" value="<?php echo $datos['fecha_nacimiento'];?>"/>
+              </div>
+              <center>
+                <input class="btn btn-success"type="submit" name="Modificar" value="Modificar">
+                <a href="index.php" class="btn btn-primary">Regresar</a>
+              </center>
+          </form>
+      </div>
+    </body>
+</html>
