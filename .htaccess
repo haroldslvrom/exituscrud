@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^usuarios$ index.php
+RewriteRule ^usuario/nuevo$ index.php?opcion=new_user
+RewriteRule ^usuario/crear$ ../index.php?opcion=registrar
+RewriteRule ^usuario/editar/([0-9]+)$ index.php?opcion=editar&id=$1
+RewriteRule ^([0-9]+)$ index.php?opcion=eliminar&id=$1

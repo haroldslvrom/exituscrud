@@ -22,7 +22,7 @@ else if($_GET['opcion']=='new_user'){
    $registro=$usuarios->new_usuario($_POST['nombre'],$_POST['apellido_paterno'],$_POST['apellido_materno'],$_POST['fecha_nacimiento']);
    $datos=$usuarios->get_usuarios();
    //Llamada a la vista mostrar todos los usuarios
-   require_once("views/usuarios_view.phtml");
+   header('Location: usuarios');
  }
  //edit
  else if ($_GET['opcion']=='editar') {
@@ -37,14 +37,14 @@ else if($_GET['opcion']=='new_user'){
     $usuarios=new usuarios_model();
     $modificar=$usuarios->update_usuario($_POST['id'],$_POST['nombre'],$_POST['apellido_paterno'],$_POST['apellido_materno'],$_POST['fecha_nacimiento']);
     $datos=$usuarios->get_usuarios();
-   require_once("views/usuarios_view.phtml");
+   header('Location: usuarios');
  } //destroy
  else if ($_GET['opcion']=='eliminar') {
     //Llamada a la vista para modificar un usuario
      $usuarios=new usuarios_model();
      $modificar=$usuarios->delete_usuario($_GET['id']);
      $datos=$usuarios->get_usuarios();
-    require_once("views/usuarios_view.phtml");
+     header('Location: usuarios');
   }
 
 

@@ -14,7 +14,7 @@
           <h2 class="sub-header">Usuarios Registrados</h2>
         </div>
         <div class="row">
-          <a class="btn btn-success" href="index.php?opcion=new_user"><i class="far fa-id-card"></i>  Nuevo Usuario</a>
+          <a class="btn btn-success" href="usuario/nuevo"><i class="far fa-id-card"></i>  Nuevo Usuario</a>
         </div><br>
         <div class="row">
           <table class="table">
@@ -37,8 +37,8 @@
               <td><?php echo $dato['apellido_paterno'];?></td>
               <td><?php echo $dato['apellido_materno'];?></td>
               <td><?php echo $dato['fecha_nacimiento'];?></td>
-              <td><center><a href="index.php?opcion=editar&id=<?php echo $dato['id'];?>"><i class="far fa-edit"></i></a></center></td>
-              <td><center><a href="index.php?opcion=eliminar&id=<?php echo $dato['id'];?>"><i class="fas fa-trash-alt"></i></a></center></td>
+              <td><center><a href="usuario/editar/<?php echo $dato['id'];?>"><i class="far fa-edit"></i></a></center></td>
+              <td><center><a href="<?php echo $dato['id'];?>"><i class="fas fa-trash-alt"></i></a></center></td>
             </tr>
           <?php
             }
